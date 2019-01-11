@@ -1,11 +1,5 @@
-# <div style="margin-bottom: 60px;">
-  <span style="
-    font-weight: bold;
-    font-size: 3em;
-    margin-bottom: 60px;
-  ">Cost of Running the Web</span>
-    <div>Michael Zelensky</div>
-  </div>
+# Cost of Running the Web
+  Michael Zelensky
 
 The web has become the global tool used by half of the Earth population. Many of us use it every day for many hours. The population is growing, the percentage of users in the population is growing, and the usage of the web during the day is also growing. More and more things become part of the web and computer-defined reality. What does it take to run it? Let's try to find out.
 
