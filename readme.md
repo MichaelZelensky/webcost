@@ -13,7 +13,7 @@ Energy   | 11.5 TWh (1.15e+10 Kilowatt-hours) |
 Storage       | 79 500 4-TB HDD's               | Same amount of hardware servers
 Human Resource | 30 million                      | Educated for 5 years |
 Maintenance   | 119 500 man-years                |
-User experience     |        0.875                      | 22.3 million years of human life time. Explanation below.
+User experience     |        0.867                      | 23.2 million years of human life time. Explanation below.
 
 ## What is calculated
 
