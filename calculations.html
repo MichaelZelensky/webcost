@@ -1,0 +1,415 @@
+<html>
+<style>
+		table {
+			border-collapse: collapse;;
+		}
+		td, th {
+			border: 1px solid #999;
+			padding: 4px;
+			font-family: Times, serif;
+		}
+		td[contenteditable] {
+			font-family: Arial, sans-serif;
+			font-size: .9em;
+		}
+		th, td.trh {
+			background-color: #eee;
+			font-weight: normal;
+			text-align: center;
+			font-family: Arial, sans-serif;
+			font-size: .8em;
+		}
+</style>
+<h1>Cost of Running the Web</h1>
+<p>Variables for calculations used in <a href="https://github.com/MichaelZelensky/webcost">Cost of Running the Web</a>. Numbers in the second column (B) are editable. Feel free to change them. Results are recalculated automatically in the column (E) </p>
+<table>
+	<tr>
+		<th></th>
+		<th>A</th>
+		<th>B</th>
+		<th>C</th>
+		<th>D</th>
+		<th>E</th>
+		<th>F</th>
+		<th>G</th>
+	</tr>
+	<tr>
+		<td class="trh">1</td>
+		<td>Websites</td>
+		<td contenteditable="true" id="nmbrSites">300000000</td>
+		<td></td>
+		<td>(1)</td>
+		<td id="f1">79500000</td>
+		<td id="f1e"></td>
+		<td>Gb</td>
+	</tr>
+	<tr>
+			<td class="trh">2</td>
+			<td>Pageviews per day</td>
+			<td contenteditable="true" id="nmbrPageviews">10</td>
+			<td></td>
+			<td>HDD's</td>
+			<td id="fHDDs">79500</td>
+			<td id="fHDDse"></td>
+			<td>pieces</td>
+		</tr>
+		<tr>
+			<td class="trh">3</td>
+			<td>Webserver Software size on disk, Gb</td>
+			<td contenteditable="true" id="nmbrWebserverSoftwareGb">2.25</td>
+			<td></td>
+			<td>(2)</td>
+			<td id="f2">7526487.6</td>
+			<td id="f2e"></td>
+			<td>kW / year</td>
+		</tr>
+		<tr>
+			<td class="trh">4</td>
+			<td>CMS size on disk, Gb</td>
+			<td contenteditable="true" id="nmbrCMSGb">0.04</td>
+			<td></td>
+			<td>(3)</td>
+			<td id="f3">9131250</td>
+			<td id="f3e"></td>
+			<td>kW / year</td>
+		</tr>
+		<tr>
+			<td class="trh">5</td>
+			<td>Sites per server</td>
+			<td contenteditable="true" id="nmbrSitesPerServer">10</td>
+			<td></td>
+			<td>(4)</td>
+			<td id="f4">11220480000</td>
+			<td id="f4e"></td>
+			<td>kW / year</td>
+		</tr>
+		<tr>
+			<td class="trh">6</td>
+			<td>Disk size, Gb</td>
+			<td contenteditable="true" id="nmbrDiskSizeGb">4000</td>
+			<td></td>
+			<td>(5)</td>
+			<td id="f5">273937500</td>
+			<td id="f5e"></td>
+			<td>kW / year</td>
+		</tr>
+		<tr>
+			<td class="trh">7</td>
+			<td>HDD power consumption, read/write mode, W</td>
+			<td contenteditable="true" id="nmbrHDDPower">5</td>
+			<td></td>
+			<td>Total E</td>
+			<td id="fTotalE">11511075237.6</td>
+			<td id="fTotalEe"></td>
+			<td>kW / year</td>
+		</tr>
+		<tr>
+			<td class="trh">8</td>
+			<td>Cooling coefficient</td>
+			<td contenteditable="true" id="nmbrCoolingCoef">2</td>
+			<td></td>
+			<td>(6)</td>
+			<td id="f6"></td>
+			<td id="f6e"></td>
+			<td>webmasters</td>
+		</tr>
+		<tr>
+			<td class="trh">9</td>
+			<td>Hardware overhead coefficient</td>
+			<td contenteditable="true" id="nmbrHardwareOverheadCoef">2</td>
+			<td></td>
+			<td>(7)</td>
+			<td id="f7"></td>
+			<td id="f7e"></td>
+			<td>man-years</td>
+		</tr>
+		<tr>
+			<td class="trh">10</td>
+			<td>HDD usage</td>
+			<td contenteditable="true" id="nmbrHDDUsageCoef">0.25</td>
+			<td></td>
+			<td>(8)</td>
+			<td id="f8"></td>
+			<td id="f8e"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">11</td>
+			<td>Page generation time, s</td>
+			<td contenteditable="true" id="nmbrPagegenTimeS">0.1</td>
+			<td></td>
+			<td>(9)</td>
+			<td id="f9"></td>
+			<td id="f9e"></td>
+			<td>hours</td>
+		</tr>
+		<tr>
+			<td class="trh">12</td>
+			<td>CPU power, W</td>
+			<td contenteditable="true" id="nmbrCPUPower">125</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">13</td>
+			<td>Data transfer power cost, kW / Gb</td>
+			<td contenteditable="true" id="nmbrDataTransfer">5.12</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">14</td>
+			<td>Page download size, Gb</td>
+			<td contenteditable="true" id="nmbrPageSizeGb">0.002</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">15</td>
+			<td>Client-side CPU time, s</td>
+			<td contenteditable="true" id="nmbrRenderTimeS">3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				16
+			</td>
+			<td>
+				Sites per webmaster
+			</td>
+			<td contenteditable="true" id="nmbrSitesPerWebmaster">10</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				17
+			</td>
+			<td>
+				Webmaster's work per site, man-days
+			</td>
+			<td contenteditable="true" id="nmbrWorkPerSite">1</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				18
+			</td>
+			<td>
+				Working days per year
+			</td>
+			<td contenteditable="true" id="nmbrWorkDaysPerYear">251</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				19
+			</td>
+			<td>
+				Painting time, s
+			</td>
+			<td contenteditable="true" id="nmbrPaintTimeS">3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				20
+			</td>
+			<td>
+				UX time, s
+			</td>
+			<td contenteditable="true" id="nmbrUXTimeS">5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				21
+			</td>
+			<td>
+				Page view duration, s
+			</td>
+			<td contenteditable="true" id="nmbrPageViewDurationS">60</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				22
+			</td>
+			<td>
+				Users count, globally, billion (x 1e+9)
+			</td>
+			<td contenteditable="true" id="nmbrUsers">4.176</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="trh">
+				23
+			</td>
+			<td>
+				Usage per user per day, hours
+			</td>
+			<td contenteditable="true" id="nmbrHoursPerUserPerDay">1</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+</table>
+<script>
+
+	var vals = {
+		nmbrSites,
+		nmbrPageviews,
+		nmbrWebserverSoftwareGb,
+		nmbrCMSGb,
+		nmbrSitesPerServer,
+		nmbrDiskSizeGb,
+		nmbrHDDPower,
+		nmbrCoolingCoef,
+		nmbrHardwareOverheadCoef,
+		nmbrHDDUsageCoef,
+		nmbrPagegenTimeS,
+		nmbrCPUPower,
+		nmbrDataTransfer,
+		nmbrPageSizeGb,
+		nmbrRenderTimeS,
+		nmbrSitesPerWebmaster,
+		nmbrWorkPerSite,
+		nmbrWorkDaysPerYear,
+		nmbrPaintTimeS,
+		nmbrUXTimeS,
+		nmbrPageViewDurationS,
+		nmbrUsers,
+		nmbrHoursPerUserPerDay,
+		hrs : 24,
+		days : 365.25
+	}
+
+	function setValues() {
+		var cell;
+		for (var i in vals) {
+			if (vals.hasOwnProperty(i)) {
+				cell = document.getElementById(i);
+				if (cell) vals[i] = parseFloat(cell.innerHTML);
+			}
+		}
+	}
+
+	function recalc () {
+		setValues();
+		console.clear();
+		//f1: sites * (CMSGb + osSize / sitePerServer)
+		var totalDiskSpace = vals.nmbrSites * (vals.nmbrCMSGb + vals.nmbrWebserverSoftwareGb / vals.nmbrSitesPerServer);
+		document.getElementById('f1').innerHTML = totalDiskSpace;
+		document.getElementById('f1e').innerHTML = totalDiskSpace.toExponential(2);
+		console.log('f1', totalDiskSpace);
+		//HDD's: totalDiskSpace / (hddSize * usageCoefficient)
+		var hddCount = totalDiskSpace / (vals.nmbrDiskSizeGb * vals.nmbrHDDUsageCoef);
+		document.getElementById('fHDDs').innerHTML = hddCount;
+		document.getElementById('fHDDse').innerHTML = hddCount.toExponential(2);
+		console.log('HDDS', hddCount);
+		//f2: hddCount * hddPower * 24 * 365 * .001 * coolingCoef * hardwareOverheadCoef
+		var hddPowerTotalYear = hddCount * vals.nmbrHDDPower * vals.hrs * vals.days * .001 * vals.nmbrCoolingCoef * vals.nmbrHardwareOverheadCoef;
+		document.getElementById('f2').innerHTML = hddPowerTotalYear;
+		document.getElementById('f2e').innerHTML = hddPowerTotalYear.toExponential(2);
+		console.log("f2", hddPowerTotalYear);
+		//f3: sites * hits * pageGenTime * days * CPUPower * coolingCoef * hardwareOverheadCoef * .001 / 3600
+		var cpuServerTotalPower = vals.nmbrSites * vals.nmbrPageviews * vals.nmbrPagegenTimeS * vals.days * vals.nmbrCPUPower * vals.nmbrCoolingCoef * vals.nmbrHardwareOverheadCoef * .001 / 3600;
+		document.getElementById('f3').innerHTML = cpuServerTotalPower;
+		document.getElementById('f3e').innerHTML = cpuServerTotalPower.toExponential(2);
+		console.log("f3", cpuServerTotalPower);
+		//f4: sites * hits * days * transferPower * pageSize
+		var transferTotalPower = vals.nmbrSites * vals.nmbrPageviews * vals.days * vals.nmbrDataTransfer * vals.nmbrPageSizeGb;
+		document.getElementById('f4').innerHTML = transferTotalPower;
+		document.getElementById('f4e').innerHTML = transferTotalPower.toExponential(2);
+		console.log("f4", transferTotalPower);
+		//f5:
+		var renderPowerTotal = vals.nmbrSites * vals.nmbrPageviews * vals.nmbrRenderTimeS * vals.days * vals.nmbrCPUPower * .001 * vals.nmbrHardwareOverheadCoef / 3600;
+		document.getElementById('f5').innerHTML = renderPowerTotal;
+		document.getElementById('f5e').innerHTML = renderPowerTotal.toExponential(2);
+		console.log("f5", renderPowerTotal);
+		//total Energy
+		var totalE = renderPowerTotal + cpuServerTotalPower + transferTotalPower + hddPowerTotalYear;
+		document.getElementById('fTotalE').innerHTML = totalE;
+		document.getElementById('fTotalEe').innerHTML = totalE.toExponential(2);
+		console.log("Total Power", totalE);
+		//f6
+		var webmasterCount = vals.nmbrSites / vals.nmbrSitesPerWebmaster;
+		document.getElementById('f6').innerHTML = webmasterCount;
+		document.getElementById('f6e').innerHTML = webmasterCount.toExponential();
+		console.log("f6", webmasterCount);
+		//f7
+		var workManYears = vals.nmbrSites * vals.nmbrSitesPerWebmaster * vals.nmbrWorkPerSite / vals.nmbrWorkDaysPerYear;
+		workManYears = Math.round(workManYears);
+		document.getElementById('f7').innerHTML = workManYears;
+		document.getElementById('f7e').innerHTML = workManYears.toExponential(2);
+		console.log("f6", workManYears);
+		//f8
+		var uxCoef = 1 - (vals.nmbrPaintTimeS + vals.nmbrUXTimeS) / vals.nmbrPageViewDurationS
+		uxCoef = uxCoef.toFixed(3);
+		document.getElementById('f8').innerHTML = uxCoef;
+		console.log("f8", uxCoef);
+		//f9
+		var userTimeLoss = vals.nmbrUsers * 1e9 * (1 - uxCoef) * vals.days * vals.nmbrHoursPerUserPerDay;
+		document.getElementById('f9').innerHTML = userTimeLoss;
+		document.getElementById('f9e').innerHTML = userTimeLoss.toExponential(2);
+		console.log("f9", userTimeLoss);
+	}
+	recalc();
+
+	(function setListeners() {
+		var cell;
+		for (var i in vals) {
+			if (vals.hasOwnProperty(i)) {
+				cell = document.getElementById(i);
+				if (cell) {
+					cell.addEventListener('keyup', recalc);
+				}
+			}
+		}
+	})();
+
+</script>
+</body>
+</html>
