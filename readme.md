@@ -1,4 +1,4 @@
-<div style="margin-bottom: 60px;">
+# <div style="margin-bottom: 60px;">
   <span style="
     font-weight: bold;
     font-size: 3em;
@@ -9,7 +9,7 @@
 
 The web has become the global tool used by half of the Earth population. Many of us use it every day for many hours. The population is growing, the percentage of users in the population is growing, and the usage of the web during the day is also growing. More and more things become part of the web and computer-defined reality. What does it take to run it? Let's try to find out.
 
-# Costs summary
+## Costs summary
 
 The annual cost of running the web is:
 
@@ -21,7 +21,7 @@ Human Resource | 30 million                      | Educated for 5 years |
 Maintenance   | 119 500 man-years                |
 User experience     |        0.875                      | 22.3 million years of human life time. Explanation below.
 
-# What is calculated
+## What is calculated
 
 There are many services running on the Internet, and it is extremely difficult to separate them from each other. The goal of this paper to find out how much energy and human resource consumes the web. We can define the web as hypertext web. It mainly consists of websites, each on its own domain of the 2nd, 3rd, and sometimes 4th and rarely 5th and deeper level domains. Websites use Content Management Systems (CMS), and require running a web-server 24x7 in a data center. These webservers must be up and available on any point of the Internet, i.e. any place on the Earth that has connectivity.
 
@@ -34,7 +34,7 @@ Summing up, there are three main parts of the web that consume energy:
 
 If we happen to analyze these groups, we will find out how much energy and resource the web consumes. To do this, first we need to find out the number of pages served. It is not easy, but we can do some approximations.
 
-# Statistics
+## Statistics
 
 **Domain names**
 There are [342,4 million](https://www.verisign.com/en_US/domain-names/dnib/index.xhtml) 2-level domain names registered by Q3 2018. Annual growth 3.5%.
@@ -59,14 +59,14 @@ Others       |  43% |
 
 Source: [CMS Usage Top 1M sites](https://trends.builtwith.com/cms)
 
-# Server-side
+## Server-side
 The principle of work of a typical CMS is in generating an html page dynamically using many elements, such as scripts, text files, and databases. It means that when a browser requests a page from a server, the web server starts up a process of the page generation and then responses to the client with this page. Every time a page is requested, it is generated anew and then sent to the client. So, if there are 1000 clients requesting the same page, it is generated 1000 times.
 
 A web server is a hardware machine that can host one or many websites on it. It requires an operating system (OS) and other software to host websites. This software can take 1 GB of disk space or more.
 
 The typical webserver must be up and running 24x7, ready to serve any client that requests a page any time a day or night.
 
-## Cooling
+### Cooling
 
 The physical work that computers do is turning electricity into heat because of electrical resistance. To get rid of that heat, data centers must use cooling of the same power. This adds the 2x coefficient to our formulas below.
 
@@ -75,11 +75,11 @@ E.g. see randomly found [Cisco's whitepaper](https://www.cisco.com/c/en/us/solut
 > center can match or exceed the power used to run the IT equipment itself. Cooling also is often the limiting factor in
 > data center capacity (heat removal can be a bigger problem than getting power to the equipment).
 
-## Hardware overhead
+### Hardware overhead
 
 There are several components of the server hardware architecture: CPU (50-150 W), RAM (2-6 W), HDD (0.6-9 W), motherboard (20-100 W), power supply, [etc](http://www.buildcomputers.net/power-consumption-of-pc-components.html). We will build our calculations only on CPU and HDD energy consumption, but it is clear that they cannot run on their own. They need the whole set of components, so for the other components overhead we will simply use a coefficient of 2x.
 
-## Storage
+### Storage
 
 Storage, needed for a website, varies greatly. There can be just one website on a dedicated hardware server, or a thousand of websites on a virtual server. If there is only one website on a server, this website requires OS and webserver software, that in total can take from 0.5 GB to 5 GB (2.25GB mean), and actually there is no higher limit. If many websites are served from one OS, then the disk space taken by the OS and webserver software is shared between all websites. Going on the assumption that a webserver serves 10 websites on average in the global scope, one website disk space overhead is 2.25 GB / 10 = 225MB. We will rely on this number until we don't have better statistics.
 
@@ -93,13 +93,13 @@ or **79 500 4-TB hard drives** (as the most popular) with 25% usage in average (
 
 We will use this as the safe lower limit. Real data storage on the web is of course many times higher.
 
-## Computation
+### Computation
 
 A webpage requested from a CMS-driven website causes the runtime environment (e.g. php) generate a new html page. During the process of the page generation a lot of computational and operational power is used: scripting engine compiles scripts, many files are read, numerous DB connections and data retrievals are done, a lot of string processing of text files are done, numerous function call stacks thousand steps long are invoked. A typical question on CMS forums is how to avoid CPU bandwidth limit overgo. An html page rendering can take in worst cases up to 1s, or 0.1s in average. A CPU consumes 125 W. If an average website is hit as little as 10 times a day, generating the web costs around **15.22 million kWh** of energy per year:
 
 **(3)** 3e+8 sites x 10 hits x 0.1s CPU / 3600 (s to hrs) x 365.25 days x 125 W / 1e+3 (kW) x 2 (cooling) x 2 (overhead) = **15 218 750** kWh / year
 
-# Transfer
+## Transfer
 
 Every time a page is requested by the client software, it downloads content (text) mixed with markup (HTML), rendering and interaction instructions (CSS and JS), and all linked resources (fonts, libraries, images, and other media). An average page size is [2MB](https://www.machmetrics.com/speed-blog/website-size-the-average-web-page-size-is-more-than-2mb-twice-the-size-of-the-average-page-just-3-years-ago/) and growing. Transfer of 1GB of data [consumes 5.12 kWh](https://aceee.org/files/proceedings/2012/data/papers/0193-000409.pdf). Quote from the same source, explaining why it takes that much:
 
@@ -110,7 +110,7 @@ Taking our 10 hits per day, we can calculate the annual web transfer energy cons
 **(4)** 3e+8 sites * 10 hits * 365.25 days * 5.12 kW * 0.002 GB = **11 220 480 000 kWh**
 
 
-# Client-side
+## Client-side
 
 When a page is downloaded, it has to be rendered by the HTTP client software. Rendering of a html page is a highly energy- and computation-consuming process. First, HTML is parsed and DOM is built, then CSS is parsed and applied to the DOM elements. So, every time a web page is requested, the browser has to render it from the raw HTML and CSS.
 
@@ -128,7 +128,7 @@ Adding time needed for DNS resolving and data transfer, we will probably get aro
 
 **(5)** 3e+8 sites x 10 hits x 3 s / 3600 (s to hrs) x 365.25 days x 125 W / 1e+3 (kW) x 2 (overhead) = **228 281 250 kWh**
 
-# Total Energy
+## Total Energy
 
 Summing up the above calculations show that the web consumes
 
@@ -136,7 +136,7 @@ Summing up the above calculations show that the web consumes
 
 One should take into consideration 18% overhead needed to produce and transfer electricity, which is not covered here.
 
-# Ecology impact
+## Ecology impact
 
 In [greenhouse gas terms](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator), 11.5 TWh means:
 - 80 million metric tons of CO<sub>2</sub> emission
@@ -146,9 +146,9 @@ In [greenhouse gas terms](https://www.epa.gov/energy/greenhouse-gas-equivalencie
 
 In addition to that, the web needs Internet infrastructure: wires, datacenters, space, buildings, roads for maintenance. Computers turn energy into heat, this is the physical work that they do. To save money on cooling, it is becoming popular to build datacenters in naturally cold regions, which heats them up and harms life balance in these places.
 
-# Non-energy cost
+## Non-energy cost
 
-## Human resource
+### Human resource
 
 A typical CMS-driven website requires expensive and time-consuming maintenance. A website administrator must be an educated computer specialist, who knows:
 - basics of computer fundamentals, like programming, networking, and system design
@@ -165,7 +165,7 @@ It takes several years to prepare such specialists, and we can assume that an av
 
 **(7)** 3e+8 sites x 1 man-day x 10 sites / 251 working days (USA) = **119 522 man-years**
 
-# User experience coefficient
+## User experience coefficient
 
 When a user retrieves a webpage, the client software sends an HTTP request to the server after resolving its IP address. The request goes through many network routers, reaching the server. Then the server starts to process this request and generates the response and response body, which consists in most cases of HTML. This response is then sent back to the client software, where it is rendered. Basing on our [above assumption](#client-side), this takes 3 seconds on average.
 
@@ -185,7 +185,7 @@ Dividing this number of hours by the number of hours in a year (24 x 365.25) wil
 
 Again, this is as if the average web session duration was 1 hour per user per day. In reality it is probably higher. As well, as learning time is also can be much higher than 5 seconds.
 
-# To the reader
+## To the reader
 
 Statistical values for these calculations are often taken from various sources, found mostly on the first page of web search results. Intuitively I would estimate the [measurement error](https://en.wikipedia.org/wiki/Observational_error) as high as 10 (you can also see that I use this number often to be refined later). Applied this measurement error, we can treat the result as being truthful between 0.1x and 10x of the calculated values.
 
