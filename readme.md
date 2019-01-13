@@ -1,7 +1,7 @@
 # Cost of Running the Web
   Michael Zelensky
 
-The web has become the global tool used by half of the Earth population. Many of us use it every day for many hours. The population is growing, the percentage of users in the population is growing, and the usage of the web during the day is also growing. More and more things become part of the web and computer-defined reality. What does it take to run it? Let's try to find out.
+The web has become the global tool used by half of Earth population. Many of us use it every day for many hours. The population is growing, the percentage of users in the population is growing, and the usage of the web during the day is also growing. More and more things become part of the web and computer-defined reality. What does it take to run it? Let's try to find out.
 
 ## Costs summary
 
@@ -17,7 +17,7 @@ User experience     |        0.867                      | 23.2 million years of 
 
 ## What is calculated
 
-There are many services running on the Internet, and it is extremely difficult to separate them from each other. The goal of this paper to find out how much energy and human resource consumes the web. We can define the web as hypertext web. It mainly consists of websites, each on its own domain of the 2nd, 3rd, and sometimes 4th and rarely 5th and deeper level domains. Websites use Content Management Systems (CMS), and require running a web-server 24x7 in a data center. These webservers must be up and available on any point of the Internet, i.e. any place on the Earth that has connectivity.
+There are many services running on the Internet, and it is extremely difficult to separate them from each other. The goal of this paper to find out how much energy and human resource consumes the web. We can define the web as hypertext web. It mainly consists of websites, each on its own domain of the 2nd, 3rd, and sometimes 4th and rarely 5th and deeper level domains. Websites use Content Management Systems (CMS), and require running a web-server 24x7 in a data center. These webservers must be up and available on any point of the Internet, i.e. any place on Earth that has connectivity.
 
 Websites consist of hypertext html pages, that are retrieved by users from webservers. The pages are then downloaded to the users' client devices and rendered by the browser software. As mentioned above, there are many Internet services which are used widely, like video and audio streaming, data transfer, etc, but we will focus only on the web transferring mainly text, images, and rendering instructions such as HTML, CSS and alike.
 
