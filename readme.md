@@ -101,7 +101,7 @@ Every time a page is requested by the client software, it downloads content (tex
 
 Taking our 10 hits per day, we can calculate the annual web transfer energy consumption as **2.2 TWh**.
 
-**(4)** 3e+8 sites * 10 hits * 365.25 days * 5.12 kW * 0.002 GB = **2 191 500 000 kWh**
+**(4)** 3e+8 sites * 10 hits * 365.25 days * 1 kW * 0.002 GB = **2 191 500 000 kWh**
 
 
 ## Client-side
