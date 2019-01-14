@@ -9,7 +9,7 @@ The annual cost of running the web is:
 
 Item | Amount per year                    | Notes |
 ------ | -----| ---- |
-Energy   | 11.5 TWh (1.15e+10 Kilowatt-hours) |
+Energy   | 2.5 TWh (2.5e+9 kilowatt-hours) |
 Storage       | 79 500 4-TB HDD's               | Same amount of hardware servers
 Human Resource | 30 million                      | Educated for 5 years |
 Maintenance   | 119 500 man-years                |
@@ -95,13 +95,13 @@ A webpage requested from a CMS-driven website causes the runtime environment (e.
 
 ## Transfer
 
-Every time a page is requested by the client software, it downloads content (text) mixed with markup (HTML), rendering and interaction instructions (CSS and JS), and all linked resources (fonts, libraries, images, and other media). An average page size is [2MB](https://www.machmetrics.com/speed-blog/website-size-the-average-web-page-size-is-more-than-2mb-twice-the-size-of-the-average-page-just-3-years-ago/) and growing. Transfer of 1GB of data [consumes 5.12 kWh](https://aceee.org/files/proceedings/2012/data/papers/0193-000409.pdf). Quote from the same source, explaining why it takes that much:
+Every time a page is requested by the client software, it downloads content (text) mixed with markup (HTML), rendering and interaction instructions (CSS and JS), and all linked resources (fonts, libraries, images, and other media). An average page size is [2MB](https://www.machmetrics.com/speed-blog/website-size-the-average-web-page-size-is-more-than-2mb-twice-the-size-of-the-average-page-just-3-years-ago/) and growing. Transfer of 1GB of data [consumes about 1 kWh](https://aceee.org/files/proceedings/2012/data/papers/0193-000409.pdf). Quote from the same source, explaining why it takes that much:
 
 >All of the sends and receives at the carrier nodes are brokered by routers, switches, or hubs; each humming with the electronics of their own processers and overhead loads such as cooling, power conditioning, and lighting.  Additionally, when fiber optic, copper-wire, or wireless communication links must span long distances, the signal degrades and must be regenerated periodically by repeaters, each of which adds to the energy footprint of the activities.
 
-Taking our 10 hits per day, we can calculate the annual web transfer energy consumption as **11.22 TWh**.
+Taking our 10 hits per day, we can calculate the annual web transfer energy consumption as **2.2 TWh**.
 
-**(4)** 3e+8 sites * 10 hits * 365.25 days * 5.12 kW * 0.002 GB = **11 220 480 000 kWh**
+**(4)** 3e+8 sites * 10 hits * 365.25 days * 5.12 kW * 0.002 GB = **2 191 500 000 kWh**
 
 
 ## Client-side
@@ -126,17 +126,17 @@ Adding time needed for DNS resolving and data transfer, we will probably get aro
 
 Summing up the above calculations show that the web consumes
 
-**11 477 917 940 kWh** per year, or **11.5 TWh**.
+**2 448 937 940 kWh** per year, or **2.5 TWh**.
 
 One should take into consideration 18% overhead needed to produce and transfer electricity, which is not covered here.
 
 ## Ecology impact
 
-In [greenhouse gas terms](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator), 11.5 TWh means:
-- 80 million metric tons of CO<sub>2</sub> emission
-- 17.3 million cars owned and driven round a year. This is 1/4 of all cars [produced in 2016](http://www.worldometers.info/cars/) globally.
-- 199 billion miles of a car driven.
-- 1.3 trillion (1.3e+12) trees grown for 10 years to sequester carbon dioxide emissions. This number of trees is equal to 117 million square kilometers of forest, where trees grow in every 3 meters (11,5% of the [whole dry land area](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area#Countries_and_dependencies_by_area)). Given that the world's forest is shrinking, this amount of CO<sub>2</sub> will be absorbed by the ocean, increasing its acidity and killing its life, though this is rather a bigger problem of the global CO<sub>2</sub> emissions, than our study.
+In [greenhouse gas terms](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator), 2.5 TWh means:
+- 1.73 million metric tons of CO<sub>2</sub> emission
+- 0.37 million cars owned and driven round a year.
+- 4.23 billion miles of a car driven.
+- 30 million trees grown for 10 years to sequester carbon dioxide emissions.
 
 In addition to that, the web needs Internet infrastructure: wires, datacenters, space, buildings, roads for maintenance. Computers turn energy into heat, this is the physical work that they do. To save money on cooling, it is becoming popular to build datacenters in naturally cold regions, which heats them up and harms life balance in these places.
 
